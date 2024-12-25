@@ -20,7 +20,7 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ImplementedEntity>()
-            .HasIndex(x => x.CreatedAt);
+            .HasIndex(x => new { x.Id, x.CreatedAt });
 
         base.OnModelCreating(modelBuilder);
     }
@@ -29,3 +29,4 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
         [CallerMemberName] string? callerFunction = null,
         [CallerFilePath] string? callerFile = null) =>
         await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+}
