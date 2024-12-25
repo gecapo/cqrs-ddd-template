@@ -1,4 +1,4 @@
-# Architecture Solution Template for .NET8
+# Architecture Solution Template for .NET
 
 This is a solution template for creating ASP.NET Core Web API that puts together CQRS + DDD (Domain Driven Design).
 
