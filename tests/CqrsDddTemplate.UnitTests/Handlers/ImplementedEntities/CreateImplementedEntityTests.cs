@@ -9,14 +9,14 @@ public class CreateImplementedEntityTests
 
     private static void SetTestData(ApplicationDbContext dc)
     {
-        var products = new List<ImplementedEntity>
+        var implementedEntities = new List<ImplementedEntity>
         {
             new("One"),
             new("Two"),
             new("Three"),
         };
 
-        dc.ImplementedEntity.AddRange(products);
+        dc.ImplementedEntity.AddRange(implementedEntities);
         dc.SaveChanges();
     }
 

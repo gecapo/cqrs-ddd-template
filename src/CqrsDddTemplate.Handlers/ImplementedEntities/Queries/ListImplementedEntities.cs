@@ -8,7 +8,7 @@ public static class ListImplementedEntities
 
     public sealed class Response(IReadOnlyCollection<ImplementedEntity> entities)
     {
-        public IReadOnlyCollection<ImplementedEntityListModel> Customers { get; private set; } =
+        public IReadOnlyCollection<ImplementedEntityListModel> Entities { get; private set; } =
             entities.Select(ImplementedEntityListModel.Create).ToList();
     }
 
