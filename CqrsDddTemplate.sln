@@ -8,9 +8,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsDddTemplate.Domain", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsDddTemplate.Handlers", "src\CqrsDddTemplate.Handlers\CqrsDddTemplate.Handlers.csproj", "{5D6742CF-ABA5-479B-8FC3-A41BCCD03797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsDddTemplate.Infrastructure", "CqrsDddTemplate.Infrastructure\CqrsDddTemplate.Infrastructure.csproj", "{DE99034E-6E75-499F-8C0E-5129B6C3EACD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsDddTemplate.UnitTests", "tests\CqrsDddTemplate.UnitTests\CqrsDddTemplate.UnitTests.csproj", "{4E04CB38-2807-4581-8E87-C15931DC3BC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsDddTemplate.Infrastructure", "src\CqrsDddTemplate.Infrastructure\CqrsDddTemplate.Infrastructure.csproj", "{2F348A66-BCD5-4E63-A6A2-E9DF67384111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,13 +34,13 @@ Global
 		{5D6742CF-ABA5-479B-8FC3-A41BCCD03797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D6742CF-ABA5-479B-8FC3-A41BCCD03797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D6742CF-ABA5-479B-8FC3-A41BCCD03797}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE99034E-6E75-499F-8C0E-5129B6C3EACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE99034E-6E75-499F-8C0E-5129B6C3EACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE99034E-6E75-499F-8C0E-5129B6C3EACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE99034E-6E75-499F-8C0E-5129B6C3EACD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E04CB38-2807-4581-8E87-C15931DC3BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E04CB38-2807-4581-8E87-C15931DC3BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E04CB38-2807-4581-8E87-C15931DC3BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E04CB38-2807-4581-8E87-C15931DC3BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F348A66-BCD5-4E63-A6A2-E9DF67384111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F348A66-BCD5-4E63-A6A2-E9DF67384111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F348A66-BCD5-4E63-A6A2-E9DF67384111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F348A66-BCD5-4E63-A6A2-E9DF67384111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
