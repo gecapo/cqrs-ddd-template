@@ -20,7 +20,18 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ImplementedEntity>()
-            .HasIndex(x => new { x.Id, x.CreatedAt });
+            .Property(x => x.Name)
+            .HasMaxLength(128);
+
+        modelBuilder.Entity<ImplementedEntity>()
+            .HasIndex(x => new { x.Id, x.CreatedAt })
+            .IncludeProperties(x => new { x.Id, x.CreatedAt, x.Name })
+            .HasDatabaseName("IX_Id_CreatedAt_Descending")
+            .IsDescending();
+
+        modelBuilder
+            .Entity<ImplementedEntity>()
+            .ToTable(b => b.HasCheckConstraint("CK_Name", "[Name] <> 'NULL'"));
 
         base.OnModelCreating(modelBuilder);
     }
