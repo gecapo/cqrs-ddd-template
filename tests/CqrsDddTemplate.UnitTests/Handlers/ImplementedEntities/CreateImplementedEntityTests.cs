@@ -34,8 +34,6 @@ public class CreateImplementedEntityTests
 
         var id = await GetHandler(dc).Handle(command, default);
 
-        Assert.NotNull(id);
-
         var result = dc.ImplementedEntity.SingleOrDefault(o => o.Id == id);
         var actualCount = dc.ImplementedEntity.Count();
 

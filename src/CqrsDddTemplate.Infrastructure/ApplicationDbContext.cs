@@ -9,14 +9,6 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
 {
     public DbSet<ImplementedEntity> ImplementedEntity { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder builder)
-    {
-        if (!builder.IsConfigured)
-        {
-            builder.UseAzureSql("");
-        }
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ImplementedEntity>()
@@ -25,7 +17,7 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
 
         modelBuilder.Entity<ImplementedEntity>()
             .HasIndex(x => new { x.Id, x.CreatedAt })
-            .IncludeProperties(x => new { x.Id, x.CreatedAt, x.Name })
+            .IncludeProperties(x => new { x.Name })
             .HasDatabaseName("IX_Id_CreatedAt_Descending")
             .IsDescending();
 
